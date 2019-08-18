@@ -4,7 +4,7 @@ A sample admin interface for the united-church-platform built with [react-admin]
 
 ## Demo
 
-Find the live demo [here](https://sopherapps.github.io/united-church-admin).
+Find the live demo [here](https://united-church.firebaseapp.com).
 
 This uses a demo featherjs back end hosted by [heroku](https://united-church-api.herokuapp.com/docs).
 

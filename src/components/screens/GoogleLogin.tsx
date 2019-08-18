@@ -5,7 +5,7 @@ import ReactGoogleLogin from "react-google-login";
 import Grid from "@material-ui/core/Grid";
 
 const googleClientId =
-  "36338562012-k2q93rrvegcg3tfdvd5bf7q870ls25b7.apps.googleusercontent.com";
+  "36338562012-9hdofvvt61e84t2bbip954lv0rc9fufk.apps.googleusercontent.com";
 
 const GoogleLogin = ({ userLogin }: { [key: string]: any }) => {
   const handleResponse = (response: any) => {
