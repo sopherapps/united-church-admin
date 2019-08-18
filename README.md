@@ -1,44 +1,70 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# united-church-admin
 
-## Available Scripts
+A sample admin interface for the united-church-platform built with [react-admin](https://marmelab.com/react-admin) and [ra-feathersjs-oauth](https://github.com/sopherapps/ra-feathers-oauth)
 
-In the project directory, you can run:
+## Demo
 
-### `npm start`
+Find the live demo [here](https://sopherapps.github.io/united-church-admin).
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+This uses a demo featherjs back end hosted by [heroku](https://united-church-api.herokuapp.com/docs).
 
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
+The code for the back end can be found in [this github repo](https://github.com/sopherapps/united-church-api).
 
-### `npm test`
+## Developing
 
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+You will need have [nodejs](https://nodejs.org) v+10 installed.
 
-### `npm run build`
+The app was bootstrapped using 'create-react-app' and naturally, [yarn](https://yarnpkg.com/lang/en/docs/install) was the preferred package manager but npm also works fine.
 
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
+1. Clone the repo
 
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
+    ```bash
+    git clone https://github.com/sopherapps/united-church-admin
+    ```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+2. Install dependencies
 
-### `npm run eject`
+    ```bash
+    cd united-church-admin && yarn install
+    ```
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+3. Set up back end, start its server and note its running url. The instructions for setting up the back-end can be found on [this github repo](https://github.com/sopherapps/united-church-api).
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+4. Change the apiUrl in [App.tsx](./src/App.tsx) to the url of your back end
 
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+    ```typescript
+    import UploadIcon from "@material-ui/icons/CloudUpload";
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+    // change this url here to your own.
+    const apiUrl = "https://united-church-api.herokuapp.com";
 
-## Learn More
+    // make the config progressively adaptible
+    const feathersClient = createFeathersClient(apiUrl, {
+    storageKey: "united-church-demo"
+    });
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+    ```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+5. Set up your Google app so that Google Sign In is set up. Here are the [instructions](https://developers.google.com/identity/sign-in/web/sign-in#before_you_begin).
+6. Change the googleClientId in the [GoogleLogin](./src/components/screens/GoogleLosing.tsx) to your new Google Client ID
+
+    ```typescript
+    import Grid from "@material-ui/core/Grid";
+
+    // change this value to your own Google Client ID
+    const googleClientId =
+      "hjfhahfafjhsjkhafjsyfarhfuiarhiua6724953.apps.googleusercontent.com";
+
+    const GoogleLogin = ({ userLogin }: { [key: string]: any }) => {
+    ```
+
+7. Start the front end app and a browser tab should automatically open at the url [http://localhost:3000](http://localhost:3000)
+
+    ```bash
+    yar start
+    ```
+
+## Related Projects
+
+1. [UnitedCHURCH app](https://github.com/sopherapps/united-church)
+2. [UnitedCHURCH back end](https://github.com/sopherapps/united-church-api)
