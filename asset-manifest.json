@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/united-church-admin/static/css/main.5ecd60fb.chunk.css",
+    "main.js": "/united-church-admin/static/js/main.20ea019e.chunk.js",
+    "main.js.map": "/united-church-admin/static/js/main.20ea019e.chunk.js.map",
+    "runtime~main.js": "/united-church-admin/static/js/runtime~main.adc49a2c.js",
+    "runtime~main.js.map": "/united-church-admin/static/js/runtime~main.adc49a2c.js.map",
+    "static/js/2.b61a78cb.chunk.js": "/united-church-admin/static/js/2.b61a78cb.chunk.js",
+    "static/js/2.b61a78cb.chunk.js.map": "/united-church-admin/static/js/2.b61a78cb.chunk.js.map",
+    "index.html": "/united-church-admin/index.html",
+    "precache-manifest.f812c415b9f3e0bd6ea1254b03ace555.js": "/united-church-admin/precache-manifest.f812c415b9f3e0bd6ea1254b03ace555.js",
+    "service-worker.js": "/united-church-admin/service-worker.js",
+    "static/css/main.5ecd60fb.chunk.css.map": "/united-church-admin/static/css/main.5ecd60fb.chunk.css.map"
+  }
+}
