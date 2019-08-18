@@ -66,7 +66,7 @@ The app was bootstrapped using 'create-react-app' and naturally, [yarn](https://
 
 ## Related Projects
 
-1. [UnitedCHURCH app](https://github.com/sopherapps/united-church)
+1. [UnitedCHURCH app](https://github.com/sopherapps/united-church-mobile)
 2. [UnitedCHURCH back end](https://github.com/sopherapps/united-church-api)
 
 ## License
